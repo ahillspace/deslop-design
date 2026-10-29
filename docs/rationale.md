@@ -16,7 +16,7 @@ The route uses that job rather than treating a whole company as one visual genre
 | Autonomous direction keeps routine choices inside the work while material truth or authority gaps remain explicit | Design: orient and build | A, B, I |
 | One relevant genre reference keeps report evidence and product task flows from inheriting a landing-page sequence | [Design router](../skills/artifact-design/SKILL.md#orient); the four genre references | B, I; original report synthesis |
 | Fluid sizing, structural breakpoints, semantic contrast roles, and content-specific visual devices are reproducible | [Implementation techniques](../skills/artifact-design/references/implementation.md) | A, I, J, L |
-| Copy review catches unsupported importance, vague claims, attribution gaps, rhythm, and weak endings while retaining voice | [Copy](../skills/artifact-design/references/copy.md) | H, E, F |
+| Copy review catches empty contrasts, faux insights, interpretive asides, unsupported importance, attribution gaps, heading vagueness, and empty endings while preserving the writer's point, terminology, and cadence | [Copy](../skills/artifact-design/references/copy.md) | H, E, F |
 | A progressive reveal shows one passive sequence without hiding required content or keyboard actions | [Motion](../skills/artifact-design/references/motion.md) | A, I, J, L |
 | Semantic controls, real state changes, and truthful recovery keep designed interactions usable | Design: build; tools; [review evidence](../skills/artifact-review/SKILL.md#gather-evidence) | D, I, J |
 | Rendered captures plus keyboard, state, and source checks distinguish visual judgment from mechanical evidence | [Review: gather evidence](../skills/artifact-review/SKILL.md#gather-evidence) and design completion | B, C, J |
@@ -26,14 +26,32 @@ The route uses that job rather than treating a whole company as one visual genre
 ## Context cost and routing
 
 The design entrypoint holds the shared workflow and the links needed to route a task.
-It loads the implementation reference for each build and one genre reference for the main surface.
-It loads copy when visible language or claims need substantive editing.
-It loads motion only when motion is useful.
+It directs the model to read the implementation reference and the genre reference for the main surface.
+For distinct surfaces or jobs, it directs the model to read only each corresponding genre reference.
+Copy is conditional on substantive language work, and motion is conditional on movement being useful.
 It does not require every genre reference or a persistent design sidecar.
 
-The total context cost is therefore the entrypoint plus implementation plus the selected genre, with copy and motion added only when relevant.
-Validation records current word counts for each resource and the common paths.
-The counts make the shared load and optional per-path cost visible; they are maintenance information, not a quality score.
+The current files have these whitespace word counts:
+
+| Resource | Words | When it is loaded |
+|---|---:|---|
+| Design entrypoint | 780 | Every build |
+| Implementation | 478 | Every build |
+| Reports genre | 210 | When reports are the main surface |
+| Tools genre | 243 | When dashboards or tools are the main surface |
+| Editorial genre | 204 | When an explanation is the main surface |
+| Landing genre | 226 | When a persuasive page is the main surface |
+| Copy | 1,546 | When prose, labels, or claims need substantive editing |
+| Motion | 495 | When movement helps explain or emphasize an action |
+| Review entrypoint | 634 | For review, independent of design |
+
+An intended build path totals about 1,462 to 1,501 words before optional copy and motion guidance.
+Adding copy raises that path to 3,008 to 3,047 words; adding motion raises it to 1,957 to 1,996 words; using both raises it to 3,503 to 3,542 words.
+The skill entry counts exclude frontmatter, and all these whitespace counts are a rough context-size proxy, not model-token measurements or a quality score.
+The checker reports entrypoint counts, and maintainers can repeat the reference counts with `wc -w`.
+These totals describe the intended routed load.
+The independent evaluator on snapshot `7637b40` read all seven artifact-design references despite receiving single-surface tasks.
+Selective reference loading therefore remains unverified; the explicit routing instruction was clarified after that snapshot, as recorded in [validation](validation.md).
 
 The package leaves review independent and keeps its repair authority tied to the request.
 It omits a runtime engine, install hook, automatic detector, required concept competition, random style selection, taste score, and external design service.

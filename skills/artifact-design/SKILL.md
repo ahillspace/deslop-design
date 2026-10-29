@@ -22,7 +22,8 @@ A mixed product can use more than one of these jobs across its routes or section
 On a persuasive brand surface, make the supported offer, proof, terms, and next action easy to see.
 In a working product surface, foreground the task, current state, controls, and recovery; carry the brand through details that do not compete with that work.
 Do not move campaign language into an operational screen or flatten a brand surface into generic utility copy.
-Read the matching genre reference below and [implementation techniques](references/implementation.md).
+Read the [implementation techniques](references/implementation.md) and exactly the genre reference for the main surface below.
+For a request covering distinct surfaces or jobs, read only the reference for each one; do not load unrelated genre references.
 Load [copy](references/copy.md) for substantive prose, labels, or claims.
 Load [motion](references/motion.md) only when movement helps explain a change, direct attention, or give the subject useful character.
 

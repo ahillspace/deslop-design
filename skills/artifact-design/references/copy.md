@@ -4,6 +4,7 @@ Load for substantive prose, interface states, headings, or claims that need proo
 Write from the reader's task and the available evidence before fitting words to a layout.
 Preserve the project's terminology, conventions, voice, useful uncertainty, and direct quotations.
 Make the smallest change that clears confusion or removes empty phrasing.
+Move the point earlier only when the setup delays it; keep an anecdote, detour, or slower reveal when it adds context or voice.
 
 ## Review for meaning before style
 
@@ -18,16 +19,17 @@ Check for:
 - An opener that delays the useful sentence without adding context or voice.
 - A supposedly hidden insight or dramatic colon that withholds an ordinary claim.
 - Interpretive asides that tell the reader what to notice, how important it is, or what a clear sentence means again.
-- Stock hype, empty adverbs, and padded phrases that add no precision or recognizable voice.
+- Stock hype, empty adverbs, and padded phrases such as “in today's world,” “at its core,” “it's worth noting,” or “delve into” when they add no precision or recognizable voice.
 - Commentary that tells readers a fact is important instead of showing the fact or consequence.
 - A trailing claim about what an event symbolizes when the text only describes the event.
-- Inflated importance, vague praise, or a weak verb where a concrete fact or direct verb is available.
+- Inflated importance, vague praise, or a weak verb phrase such as “serves as” where a concrete fact or direct verb is available.
 - A source claim attributed to unnamed experts, reports, or studies.
 - A run of synonyms that obscures whether the subject is the same person, system, or object.
 - A negative list, stack of fragments, identical sentence shapes, or question that tees up its own answer.
+- A general statement that could move unchanged to another company, page, or product without losing meaning.
 - A cluster of em dashes used as default punctuation or emphasis; after a colon, unnecessary title case.
 - A final metaphor, slogan, or recap that adds no fact, qualification, takeaway, or next action.
-- A heading that promises mood but does not name the section's subject, question, or action.
+- Emoji headings, decorative bold, bullets where short prose is clearer, headings over tiny sections, or a heading that promises mood instead of naming its subject, question, or action.
 - Formatting that adds emphasis or structure the content does not need.
 
 Replace abstractions with a supplied name, count, date, mechanism, action, consequence, or supported judgment.
@@ -35,7 +37,10 @@ Name a source when it exists.
 When it does not, mark an interpretation as uncertain or remove the unsupported statement.
 Do not manufacture a more concrete detail.
 Keep domain terms and necessary qualifications when simplification would make the claim less precise.
+Untangle long clauses and abstract nouns when they obscure the actor or action, but do not trade a precise term for a vague, easier word.
 Keep qualifiers that carry real uncertainty, emphasis, contrast, or voice.
+Replace a trailing “highlighting” or “underscoring” clause with the consequence it supports, or remove it if the consequence is not in evidence.
+Prefer a direct verb when it keeps the actor and action clear; passive voice remains useful when the actor is unknown or not the point.
 Use the same precise term again when it names the same thing.
 Preserve a user's quote exactly unless asked to edit quoted material.
 Retain a clear sentence just because it has a familiar shape; repair the passage around a real problem instead of applying a pattern quota.
@@ -48,6 +53,7 @@ Ask what information or action the heading identifies.
 Could it fit almost any page or unrelated section?
 If so, replace or qualify it with the named subject, question, finding, or task.
 A memorable heading is fine when nearby wording still makes the section easy to find.
+Use the same portability question on a vague claim or slogan, but keep a general sentence when it has a real purpose in context.
 
 | Before and context | After |
 |---|---|
@@ -62,7 +68,8 @@ A memorable heading is fine when nearby wording still makes the section easy to 
 | “Ultimately, clarity is the foundation of better work” | End with the last concrete finding or a supported next step |
 
 Treat each proposed replacement as conditional on the source material.
-Do not turn the examples into a list of banned words or mandatory house voice.
+These words and phrases are review cues, not a blacklist; retain them when they carry a precise meaning, are part of a quotation, or fit the writer's voice.
+When a final kicker is empty, delete it instead of replacing it with a new metaphor.
 Test the heading and any final line against the work in front of the reader: name the subject or action, then remove portable slogans and conclusions that could finish almost any unrelated page.
 
 ## Hard case: keep the evidence and the quote
@@ -89,3 +96,27 @@ A careful edit:
 
 The edit keeps the sample size, possible duplicate count, uncertainty, and exact quote.
 It marks the explanation and proposed follow-up as uncertain rather than reporting either as a proven cause or result.
+
+## Stress case: keep a voice while correcting the claim
+
+This second illustrative passage uses the same source facts with a different voice and less obvious filler:
+
+> By the second coffee we're back to comparing the clipboard with the board, which feels like a step forward unless it's another loop.
+> Eleven of 18 tickets have no supplier update date; four are probably duplicates, though I haven't checked them one by one.
+> I want the new intake field to end the weekly scramble, but the arrival dates are patchy, so maybe that's not something this sample can settle.
+> Val said, “I still check the clipboard and the board because they disagree.”
+> I don't have a date for the quote, which bugs me a little.
+> This isn't about blaming a volunteer; it's about making the status easier to find.
+
+A source-faithful edit:
+
+> By the second coffee, we're back to comparing the clipboard with the board.
+> Eleven of 18 tickets have no supplier update date; four carry a possible-duplicate flag, which has not been verified.
+> The intake view now includes a parts-status field; this sample cannot tell whether it will reduce the weekly scramble.
+> Arrival dates are inconsistent, so this sample cannot show how long the tickets waited.
+> Val said, “I still check the clipboard and the board because they disagree.”
+> The date of Val's comment is missing, and I wish we had it.
+> The work here is to make the current status easier to find.
+
+The edit corrects the duplicate claim, keeps the writer's small personal aside, and does not claim that the new field solved the problem.
+It preserves the supplied quote and states what the sample cannot establish.

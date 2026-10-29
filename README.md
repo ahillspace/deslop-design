@@ -11,7 +11,7 @@ The design skill works end to end after invocation, using the brief and existing
 
 Design and review retain separate entrypoints.
 Each works without the other.
-Design loads the implementation guide and one relevant genre reference; it loads copy and motion only when those jobs arise.
+Design directs the model to load the implementation guide and only the relevant genre reference or references; copy and motion guidance is conditional on those jobs.
 Review works independently on an existing artifact.
 Neither needs a framework, external service, global install, or project instruction-file changes.
 Bring the browser tooling and project components you already use.
