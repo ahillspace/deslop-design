@@ -1,62 +1,59 @@
-# Design rationale and coverage
+# Architecture and reference coverage
 
-This package serves agents creating four kinds of HTML artifact and maintainers who need to know why each instruction exists.
-The design entrypoint runs an inferred direction through implementation and rendered correction after invocation.
-Review keeps its independent findings and repair path.
-Both preserve project requirements and existing product decisions.
+The package keeps the existing `artifact-design` and `artifact-review` invocation names.
+Both entrypoints begin with the shared [routing reference](../skills/artifact-design/references/routing.md), which classifies medium, reader purpose, requested operation, and conditional features for each distinct route or section.
+The router then requires the agent to read every applicable reference in full, use its procedure, and record coverage and unavailable evidence.
 
-The design skill classifies the visitor's job per surface.
-A product may have a persuasive landing page, an operational workspace, and a reading surface with different information needs.
-The route uses that job rather than treating a whole company as one visual genre.
+## Why the architecture has two entrypoints
 
-| Mechanism and intended effect | Maintained location | Conceptual sources |
+Design and review have different authorization boundaries.
+Design carries authorized work through implementation and rendered correction; review is findings-only unless the request grants repair authority.
+Keeping the entrypoints separate preserves existing invocation compatibility and prevents review from silently becoming a rewrite.
+The folders are installed together because review shares the design package's classifier and references.
+
+The substantive methods live in focused references rather than a long skill preamble.
+The router requires broad applicable coverage for thorough audits and substantial redesigns, while narrow tasks select only the relevant methods.
+Mixed products combine routes at the page or section that needs them.
+
+## Reference ownership
+
+| Concern | Maintained reference | Distilled capability |
 |---|---|---|
-| Reader, task, evidence, and unknowns are identified before styling | [Design: orient](../skills/artifact-design/SKILL.md#orient) | A, B, D, E |
-| Surface job and mixed product surfaces separate brand expression from operational UI | Design: orient; [landing](../skills/artifact-design/references/landing.md); [tools](../skills/artifact-design/references/tools.md) | B, I, J |
-| Autonomous direction keeps routine choices inside the work while material truth or authority gaps remain explicit | Design: orient and build | A, B, I |
-| One relevant genre reference keeps report evidence and product task flows from inheriting a landing-page sequence | [Design router](../skills/artifact-design/SKILL.md#orient); the four genre references | B, I; original report synthesis |
-| Fluid sizing, structural breakpoints, semantic contrast roles, and content-specific visual devices are reproducible | [Implementation techniques](../skills/artifact-design/references/implementation.md) | A, I, J, L |
-| Copy review catches empty contrasts, faux insights, interpretive asides, unsupported importance, attribution gaps, heading vagueness, and empty endings while preserving the writer's point, terminology, and cadence | [Copy](../skills/artifact-design/references/copy.md) | H, E, F |
-| A progressive reveal shows one passive sequence without hiding required content or keyboard actions | [Motion](../skills/artifact-design/references/motion.md) | A, I, J, L |
-| Semantic controls, real state changes, and truthful recovery keep designed interactions usable | Design: build; tools; [review evidence](../skills/artifact-review/SKILL.md#gather-evidence) | D, I, J |
-| Rendered captures plus keyboard, state, and source checks distinguish visual judgment from mechanical evidence | [Review: gather evidence](../skills/artifact-review/SKILL.md#gather-evidence) and design completion | B, C, J |
-| Findings rank user consequence, evidence, and confidence; bounded repairs protect scope | [Review: judge and prioritize](../skills/artifact-review/SKILL.md#judge-and-prioritize) and [repair and close](../skills/artifact-review/SKILL.md#repair-and-close) | C, G |
-| Unknowns and limits are disclosed rather than described as completed verification | Both entry skills; [validation](validation.md) | B, C, G; original completion contract |
+| Medium, purpose, operation, feature classification | [routing](../skills/artifact-design/references/routing.md) | Separate HTML, documents, fixed-page inputs, mixed routes, reader jobs, audit-only and authorized changes; list required reads and limits. |
+| Purpose, evidence, authority, information architecture | [intake and structure](../skills/artifact-design/references/intake-structure.md) | Evidence order; inference boundaries; content inventory; task paths; document argument; smallest justified structural change. |
+| Visual audit and redesign | [visual craft](../skills/artifact-design/references/visual-craft.md) | Hierarchy, composition, grids, rhythm, type, color, density, affordance, and brand as related decisions grounded in task and evidence. |
+| Narrative reports and operational interfaces | [reports](../skills/artifact-design/references/reports.md), [tools](../skills/artifact-design/references/tools.md) | Preserve evidence and interpretation for reports; keep operational task, current state, action, and recovery discoverable in tools. |
+| Sustained reading and persuasion | [editorial](../skills/artifact-design/references/editorial.md), [landing](../skills/artifact-design/references/landing.md) | Preserve reading sequence, figures, and source trail; present only supported offer, terms, proof, and working action. |
+| Long-form and printable documents | [documents](../skills/artifact-design/references/documents.md) | Argument structure, claim ledger, evidence placement, captions, semantic order, pagination, margins, footnotes, and export limits. |
+| Data displays | [data](../skills/artifact-design/references/data.md) | Trace source values and transformations; choose faithful encoding; preserve denominator, units, missingness, and exact values. |
+| Accessibility and responsive behavior | [accessibility](../skills/artifact-design/references/accessibility.md), [responsive](../skills/artifact-design/references/responsive.md), [keyboard](../skills/artifact-design/references/keyboard.md) | Bounded evidence, exact standards, reflow, user spacing, native input, focus, and pattern-specific widget contracts. |
+| Content semantics | [semantics](../skills/artifact-design/references/semantics-content.md) | Headings, links, image alternatives, table relationships, media equivalents, and reading order. |
+| Interaction and cognition | [interaction states](../skills/artifact-design/references/interaction-states.md), [forms and search](../skills/artifact-design/references/forms-search.md), [cognitive access](../skills/artifact-design/references/cognitive-accessibility.md) | Truthful state transitions, overlap-safe asynchronous work, form/search recovery, task continuity, and interruption handling. |
+| User settings and movement | [preferences](../skills/artifact-design/references/preferences.md), [motion](../skills/artifact-design/references/motion.md) | Reduced motion, forced colors and text overrides; purposeful, interruptible motion with working static fallback. |
+| Systems, AI, and alternatives | [tokens](../skills/artifact-design/references/tokens.md), [AI interfaces](../skills/artifact-design/references/ai-interface.md), [concepts](../skills/artifact-design/references/concepts.md) | Repair repeated drift by semantic role; apply trust and control only to AI surfaces; compare materially different lightweight concepts when the choice matters. |
+| Copy and completion | [copy](../skills/artifact-design/references/copy.md), [QA parity](../skills/artifact-design/references/qa-parity.md) | Preserve voice and claim meaning; compare protected content and behavior before and after using evidence matched to the claim. |
+| Task evaluation | [task walkthrough](../skills/artifact-design/references/task-walkthrough.md) | Neutral task scenarios, observed paths, qualitative priority, confidence, and explicit unassessed criteria. |
 
-## Context cost and routing
+## Required behavior by task
 
-The design entrypoint holds the shared workflow and the links needed to route a task.
-It directs the model to read the implementation reference and the genre reference for the main surface.
-For distinct surfaces or jobs, it directs the model to read only each corresponding genre reference.
-Copy is conditional on substantive language work, and motion is conditional on movement being useful.
-It does not require every genre reference or a persistent design sidecar.
+For any visual audit or redesign, inspect the whole relevant artifact and distinguish what is visible from likely effect.
+For a thorough screen audit, route to visual craft, accessibility, content semantics, responsive behavior, and a task walkthrough, then add content, data, forms, keyboard, motion, preferences, AI, and system references where their features occur.
+For narrative HTML with data, combine report and document structure, data, visual craft, accessibility, semantics, responsive behavior, task walkthrough, and parity; add keyboard or interaction checks when the table or report has controls.
+For a printable document or deck, combine documents, visual craft, applicable semantics/accessibility, data, copy, task walkthrough, and parity; inspect actual page output when available.
+For an audit-only task, do not edit.
+For a mixed task, state which part is audit-only and which has repair authority.
 
-The current files have these whitespace word counts:
+The shared [QA reference](../skills/artifact-design/references/qa-parity.md) separates source, rendered, interaction, automated, export, and user evidence.
+It requires a before/after record of protected facts, figures, units, citations, links, qualifications, actions, and meaningful states.
+Visual craft findings and usability, accessibility, factual, or behavior findings use separate report groups so that a style preference cannot obscure a factual or access barrier.
 
-| Resource | Words | When it is loaded |
-|---|---:|---|
-| Design entrypoint | 780 | Every build |
-| Implementation | 478 | Every build |
-| Reports genre | 210 | When reports are the main surface |
-| Tools genre | 243 | When dashboards or tools are the main surface |
-| Editorial genre | 204 | When an explanation is the main surface |
-| Landing genre | 226 | When a persuasive page is the main surface |
-| Copy | 1,546 | When prose, labels, or claims need substantive editing |
-| Motion | 495 | When movement helps explain or emphasize an action |
-| Review entrypoint | 634 | For review, independent of design |
+## Synthesis boundaries
 
-An intended build path totals about 1,462 to 1,501 words before optional copy and motion guidance.
-Adding copy raises that path to 3,008 to 3,047 words; adding motion raises it to 1,957 to 1,996 words; using both raises it to 3,503 to 3,542 words.
-The skill entry counts exclude frontmatter, and all these whitespace counts are a rough context-size proxy, not model-token measurements or a quality score.
-The checker reports entrypoint counts, and maintainers can repeat the reference counts with `wc -w`.
-These totals describe the intended routed load.
-The independent evaluator on snapshot `7637b40` read all seven artifact-design references despite receiving single-surface tasks.
-Selective reference loading therefore remains unverified; the explicit routing instruction was clarified after that snapshot, as recorded in [validation](validation.md).
+The compiler integrated all 26 primary distillation assignments into the local taxonomy; the exact sources, collection categories, pins, licensing links, and adopted/conditional/excluded rationale are in [source selection](source-selection.md).
+The resulting prose, examples, procedures, and code are rewritten synthesis rather than concatenated summaries.
+Existing report, tool, editorial, landing, copy, implementation, and motion references were preserved and connected to the route.
+The [provenance register](provenance.md) also records prior Anthropic, OpenAI, Impeccable, writing, critique, taste, and standards sources.
 
-The package leaves review independent and keeps its repair authority tied to the request.
-It omits a runtime engine, install hook, automatic detector, required concept competition, random style selection, taste score, and external design service.
-Those would add state or setup without being needed to deliver these HTML artifacts.
-
-[Provenance](provenance.md) distinguishes conceptual sources from reused expression.
-[Validation](validation.md) records executed checks and evidence limits.
-[Benchmark](benchmark.md) describes a future comparison rather than a demonstrated advantage.
+The package does not install upstream plugins, require an MCP service, or depend on an online source catalog at runtime.
+It does not require a concept vote, design questionnaire, fictional study, universal palette, arbitrary quota, or claim of world-class quality.
+Reference coverage documents routing intent; only executed evidence can establish that a particular artifact was reviewed or improved.

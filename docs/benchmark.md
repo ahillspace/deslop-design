@@ -3,6 +3,8 @@
 This plan is for maintainers deciding whether the package improves outcomes enough to justify owning it.
 No blinded benchmark, independent human scoring, or professional-equivalence study has run.
 The author-run [smoke checks](validation.md) test practical paths and obvious failure modes only.
+The four completed forward-use prompts and their original synthetic inputs are available in the [forward fixture bundle](forward-fixtures/README.md).
+Those development cases are reproducible inputs, not held-out tasks for a comparative claim.
 
 ## Fair comparison
 

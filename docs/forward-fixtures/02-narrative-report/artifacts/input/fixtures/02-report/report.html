@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nitrate monitoring</title>
+<style>
+body { font: 16px Arial, sans-serif; color: #2c3034; margin: 0; }
+header { background: #d8e7e4; padding: 3rem; }
+main { width: 92%; max-width: 1000px; margin: 2rem auto; }
+.hero { display: flex; gap: 2rem; align-items: center; }
+.callout { background: #f1c85b; padding: 1rem 1.5rem; font-size: 1.4rem; }
+.chart { display: grid; grid-template-columns: 130px 1fr 60px; gap: .4rem; align-items: center; margin: 1rem 0; }
+.bar-track { background: #eee; height: 20px; }
+.bar { height: 20px; background: #537d79; }
+table { border-collapse: collapse; width: 100%; }
+th, td { padding: .7rem; border-bottom: 1px solid #aaa; text-align: left; }
+.note { font-size: .85rem; color: #777; margin-top: 3rem; }
+@media(max-width: 680px) { .hero { display: block; } main { width: 960px; } .chart { grid-template-columns: 130px 1fr 60px; } }
+@media print { header { padding: 1rem; } }
+</style>
+</head>
+<body>
+<header><p>FIELD SERVICES / 04 APRIL 2026</p><h1>Nitrate monitoring</h1><p>Eight stations from the lower basin.</p></header>
+<main>
+<section class="hero">
+<div><h2>Screening threshold: 4.0 mg/L as nitrate-N</h2><p>Two stations are above the supplied threshold. One is at the threshold.</p></div>
+<p class="callout">2 of 8 above</p>
+</section>
+<section aria-labelledby="chart-title">
+<h2 id="chart-title">Station readings</h2>
+<p>Bars show readings in mg/L. The marked line is the supplied screening threshold.</p>
+<div class="chart" aria-hidden="true">
+<span>North Point</span><div class="bar-track"><div class="bar" style="width:42%"></div></div><span>2.1</span>
+<span>East Weir</span><div class="bar-track"><div class="bar" style="width:92%"></div></div><span>4.6</span>
+<span>West Reach</span><div class="bar-track"><div class="bar" style="width:78%"></div></div><span>3.9</span>
+<span>Bay Outlet</span><div class="bar-track"><div class="bar" style="width:80%"></div></div><span>4.0</span>
+<span>Upper Fork</span><div class="bar-track"><div class="bar" style="width:36%"></div></div><span>1.8</span>
+<span>Lower Mill</span><div class="bar-track"><div class="bar" style="width:94%"></div></div><span>4.7</span>
+<span>Harbor Gate</span><div class="bar-track"><div class="bar" style="width:60%"></div></div><span>3.0</span>
+</div>
+<label for="station-filter">Find a station</label>
+<input id="station-filter" type="search" placeholder="Station name">
+<table>
+<thead><tr><th>Station</th><th>Reading (mg/L nitrate-N)</th><th>Screening result</th></tr></thead>
+<tbody>
+<tr><td>North Point</td><td>2.1</td><td>Below</td></tr>
+<tr><td>East Weir</td><td>4.6</td><td>Above</td></tr>
+<tr><td>South Marsh</td><td>Not recorded</td><td>Missing</td></tr>
+<tr><td>West Reach</td><td>3.9</td><td>Below</td></tr>
+<tr><td>Bay Outlet</td><td>4.0</td><td>At threshold</td></tr>
+<tr><td>Upper Fork</td><td>1.8</td><td>Below</td></tr>
+<tr><td>Lower Mill</td><td>4.7</td><td>Above</td></tr>
+<tr><td>Harbor Gate</td><td>3.0</td><td>Below</td></tr>
+</tbody>
+</table>
+<p class="note">Source: Field sampling export, 4 April 2026. Values are readings, not health determinations.</p>
+</section>
+<section><h2>How to read this sample</h2><p>The supplied screening threshold is 4.0 mg/L nitrate-N. Readings above it are East Weir and Lower Mill; Bay Outlet is equal to it. South Marsh has no recorded value and is not counted as zero.</p><p>The sample does not establish a trend or a health effect.</p></section>
+<section><h2>Method</h2><p>Grab samples were collected once at each listed station on 4 April 2026 and analyzed by the field team's standard colorimetric procedure. One station value is missing because the instrument result was not recorded. No repeat sample is available in this file.</p></section>
+</main>
+<script>
+const input = document.querySelector('#station-filter');
+const tableRows = [...document.querySelectorAll('tbody tr')];
+input.addEventListener('input', () => {
+ const q = input.value.toLowerCase();
+ for (const row of tableRows) row.hidden = !row.textContent.toLowerCase().includes(q);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intake queue</title>
+<style>
+:root { font: 16px Arial, sans-serif; color: #192735; background: #eef1f4; }
+body { margin: 0; }
+header { background: #24384c; color: white; padding: 1.5rem 2rem; }
+main { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; }
+.grid { display: grid; grid-template-columns: 1fr 300px; gap: 1rem; }
+.panel { background: white; padding: 1rem; border: 1px solid #c9d1d9; }
+.summary { background: #fff1cb; padding: 1rem; }
+label, button, select, input { font: inherit; }
+input, select { padding: .55rem; margin: .5rem .5rem .5rem 0; }
+table { border-collapse: collapse; width: 100%; min-width: 680px; }
+th, td { text-align: left; padding: .7rem; border-bottom: 1px solid #ccd2d8; }
+button { padding: .35rem .55rem; border: 1px solid #52667b; background: white; cursor: pointer; }
+button:focus { outline: none; }
+.status { font-weight: bold; }
+@media (max-width: 720px) { main { margin: 1rem auto; } .grid { grid-template-columns: 1fr; } .table-wrap { overflow: hidden; } header { padding: 1rem; } }
+</style>
+</head>
+<body>
+<header><p>OPERATIONS / BATCH 314</p><h1>Intake queue</h1><p>Last update: 27 October, 07:42 UTC</p></header>
+<main>
+<section class="grid">
+<div class="panel">
+<h2>Open requests</h2>
+<p>11 open requests. Three packets are missing eligibility documents.</p>
+<label for="search">Find a requester</label>
+<input id="search" type="search" placeholder="Name or request ID">
+<label for="status-filter">Status</label>
+<select id="status-filter"><option value="all">All</option><option value="open">Open</option><option value="waiting">Waiting</option></select>
+<div class="table-wrap"><table>
+<thead><tr><th>Request</th><th>Requester</th><th>Status</th><th>Documents</th><th>Action</th></tr></thead>
+<tbody id="rows">
+<tr data-status="open"><td>RQ-314-08</td><td>Alina Reyes</td><td>Open</td><td>Complete</td><td><button type="button" data-review>Complete review</button></td></tr>
+<tr data-status="waiting"><td>RQ-314-09</td><td>Dev Shah</td><td>Waiting</td><td>Missing proof of address</td><td><button type="button" data-review>Complete review</button></td></tr>
+<tr data-status="open"><td>RQ-314-10</td><td>Mina Okafor</td><td>Open</td><td>Complete</td><td><button type="button" data-review>Complete review</button></td></tr>
+<tr data-status="waiting"><td>RQ-314-11</td><td>Jon Bell</td><td>Waiting</td><td>Missing income statement</td><td><button type="button" data-review>Complete review</button></td></tr>
+</tbody></table></div>
+<p id="result-count" aria-live="polite">Showing 4 sample requests</p>
+</div>
+<aside class="summary"><h2>Batch summary</h2><p>11 open</p><p>3 missing documents</p><p>7 reviews complete today</p><p><a href="#source">How this is counted</a></p></aside>
+</section>
+<section class="panel" id="source"><h2>Source and scope</h2><p>Batch 314 was updated on 27 October 2026 at 07:42 UTC. Queue counts summarize open items in the batch. Completed reviews are events recorded today.</p><p>Local prototype: actions update this page only and are not sent to the intake service.</p></section>
+</main>
+<script>
+const rows = [...document.querySelectorAll('#rows tr')];
+const search = document.querySelector('#search');
+const status = document.querySelector('#status-filter');
+const count = document.querySelector('#result-count');
+function applyFilters() {
+  const query = search.value.trim().toLowerCase();
+  let shown = 0;
+  for (const row of rows) {
+    const matchesText = row.textContent.toLowerCase().includes(query);
+    const matchesStatus = status.value === 'all' || row.dataset.status === status.value;
+    row.hidden = !(matchesText && matchesStatus);
+    if (!row.hidden) shown += 1;
+  }
+  count.textContent = 'Showing ' + shown + ' sample requests';
+}
+search.addEventListener('input', applyFilters);
+status.addEventListener('change', applyFilters);
+for (const button of document.querySelectorAll('[data-review]')) {
+  button.addEventListener('click', () => {
+    button.textContent = 'Review complete';
+    button.disabled = true;
+  });
+}
+</script>
+</body>
+</html>
