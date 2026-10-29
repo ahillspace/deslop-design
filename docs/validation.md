@@ -2,7 +2,10 @@
 
 This record separates package correctness, author practice, and evidence that has not been collected.
 Checks below name the snapshot or fixture they cover because package work continued after earlier trials.
-The current compiler candidate has not yet received its independent forward-use evaluation.
+Four independent forward tasks were completed on snapshot `b577bf8`.
+The report task exposed a quantitative chart-alignment defect, which led to shared mapping and rendered-coordinate guidance in `3a669ce`.
+A fresh report task then exercised that exact updated snapshot from the raw prompt and fixtures without receiving the earlier output or defect diagnosis.
+The outcomes and evidence limits are recorded below.
 No independent human scores, blinded comparison, professional-equivalence result, or large paid benchmark is claimed.
 
 ## Repeatable package checks
@@ -116,12 +119,98 @@ Actual browser zoom, screen-reader use, and physical-device behavior were not ve
 No repository test suite or comparative benchmark was run.
 The earlier four-fixture trial and the separate motion check remain author-run evidence only.
 
-## Current compiler candidate
+## Original forward tasks at `b577bf8`
 
-The candidate routes through a shared classifier and now includes specialist references for documents, semantic content, responsive behavior, data, accessibility, interaction, user preferences, and conditional AI interfaces.
-It also includes concrete construction examples for an asymmetric reading-and-annotation grid, a contextual type trial, measured semantic color pairs, and interruption-safe list continuity motion.
-Four raw tasks and fixtures are prepared for an independent forward-use evaluation: an interactive product audit, a data-bearing HTML report redesign, a printable decision document, and an audit of a fixed PDF with no source files.
-The independent evaluation has not run yet; these package checks do not establish routing or artifact quality.
+All four tasks used the same frozen skill snapshot and separate raw prompts and fixtures.
+The original synthetic prompts and input files are preserved with their relative paths and hashes in the [forward fixture bundle](forward-fixtures/README.md).
+The initial Chrome DevTools bridge launches failed for the product and narrative-report tasks; bounded operational retries with named isolated Chromium sessions later produced browser evidence.
+Those startup failures and the subsequent retries are retained in the task evidence.
+The evaluations found and documented real artifact defects, so they are not described as clean first-pass outputs.
+
+### Interactive product audit
+
+The audit-only review left the supplied HTML, CSV, and source note byte-identical.
+Source reconciliation found 12 records, 8 `Open`, 4 `Waiting`, and 3 rows with missing documents, making the displayed “11 open” count unsupported by the supplied data.
+Browser checks at 1440, 390, and 320 CSS pixels found 738px document width at both narrow sizes, with the first row action ending at x=703.55px at 320px.
+Keyboard focus reached the first review button with no visible indicator, and pointer or keyboard activation changed only the local button label and disabled state while leaving row status and batch counts unchanged.
+Search and status filtering, no-match, clearing, screenshots, and the local-only action state were exercised.
+The audit separated four findings: unsupported batch count, page-wide narrow overflow, invisible button focus, and potentially misleading local-only action feedback.
+No screen reader, real service, touch input, 200% zoom, forced-colors view, text-spacing override, or automated accessibility scan was tested.
+The live result-count text changed in the browser; assistive-technology announcement behavior was not verified.
+
+### Narrative report redesign
+
+The first report output preserved the eight source records, units, date, method, missing-value treatment, screening qualification, and source attribution.
+The source files contained no external URL, so the report retained the supplied attribution without inventing a destination.
+The first browser pass had launch failures and later exposed cramped phone tick labels and collisions in narrow table cards; the evaluator adjusted the task artifact and checked the phone layout again.
+
+A compiler review of the saved wide render identified that the 0, 2, 4, and 5 labels were equally spaced even though the 4.0 threshold line was at 80% of the 0-to-5 track.
+The original task output and screenshot were preserved before the evaluator repaired only that output.
+At 1440x1000, the track was 708.40625px wide, the 4 tick center was x=840.953125, and the threshold marker began at x=956.515875, a 115.56275px separation.
+After repair, the 4 tick aligned with the marker within 0.00025px and the 2 tick was within 0.0032px of its 40% coordinate.
+The evaluator reran CSV parity, keyboard filter and clear, phone rendering, and a tagged two-page Letter PDF export after the task-artifact repair.
+The initial pass had not detected the quantitative geometry error; this specific gap motivated the guidance change and was checked again in the fresh task below.
+
+### Printable A4 decision brief
+
+The evaluator produced editable HTML and a tagged, two-page A4 PDF with the requested costs, status, sample counts, missing-data exclusion, limitations, exact quote, and all three supplied references.
+The HTML was rendered at 1440, 390, and 320 CSS pixels; no page-wide overflow was observed, and keyboard Tab plus Enter reached the source notes.
+The first PDF export included Chromium's default browser header and footer; the export was regenerated with those defaults removed and the final pages were visually inspected.
+No screen reader, physical printer, 400% zoom, or reader study was used.
+The supplied internal source files were not independently validated against their underlying records.
+
+### Fixed-PDF audit
+
+The findings-only review left the supplied one-page Letter PDF unchanged and did not claim that a screenshot supplied editable source or keyboard behavior.
+Text extraction, structure and font inspection, `qpdf --check`, and actual color and grayscale renders supported an audit of the visible page.
+The audit recorded four findings: an unverifiable 92% basis, a missing or mislabeled escalation visual, touching monthly bar labels, and no tagged structure.
+The PDF was untagged and no underlying workbook or editable source was supplied, so the source truth, keyboard behavior, and accessibility for a particular reader could not be established.
+No PDF conformance claim, screen-reader test, physical printer test, or user study was made.
+
+## Fresh report task at `3a669ce`
+
+The fresh evaluator received the raw report prompt, the original fixtures, and candidate snapshot `3a669ce05bea56a6b919777bc75d12975236fbff`.
+It did not receive the prior report output, defect diagnosis, expected geometry, or source/author reports.
+The machine ledger shows it read the updated `data.md` and `qa-parity.md` references at that snapshot.
+
+The evaluator built a conclusion-led report with a common 0-to-5 mg/L plot, an exact-value table, a missing-value row, a station filter, and a Letter PDF export.
+CSV reconciliation matched all eight station records, the classifications, and bar percentages; the report retained the seven-measured/one-missing denominator, method, date, screening-only qualification, and no-trend/no-health-effect limit.
+Because the original files had no external source URL, it preserved the attribution and linked the supplied CSV instead.
+
+The new shared-scale recipe was used to place the 0, 2, 4, and 5 ticks at 0%, 40%, 80%, and 100% of the actual plot bounds.
+Browser geometry checked the same 80% threshold position at 1440, 390, and 320 CSS pixels, with plot widths of 770.8125px, 324px, and 265.21875px.
+The threshold offsets measured 616.641px, 259.188px, and 212.172px respectively, and page scroll width matched the viewport at all three sizes.
+Keyboard search returned one row for “East Weir,” an explicit zero-result state for “no station,” and all eight rows after clearing.
+The tagged, three-page Letter PDF was regenerated, text-extracted, and visually inspected after the order correction.
+The final first page still leaves substantial open space below the title and summary; page breaks keep the chart and table together on page 2 and interpretation, method, and source together on page 3.
+This remains a print-density limitation, and no minimum-page optimization is claimed.
+
+The initial integrity pass corrected the reference hashes but changed the report's order description to classification groups in source order without changing the artifact.
+That description still contradicted the artifact's descending-order claim, which the screenshot review exposed.
+After the first review, the retained 320px chart screenshot showed East Weir at 4.6 before Lower Mill at 4.7 even though the section promised descending measured-value order.
+The follow-up correction moved Lower Mill before East Weir in both the chart and table, retained South Marsh last, and preserved all values, station associations, classifications, units, threshold, caveats, missingness, and filter logic.
+The pre-correction screenshot remains in the evaluator evidence.
+The evaluator refreshed wide and phone renders, rechecked chart/table parity and filter match, no-match, and clear states, then regenerated and inspected all three tagged Letter PDF pages.
+The post-correction checks at 1440px and 320px retained viewport-width pages, the approximately 80% threshold position, and bar lengths proportional to value on the 0-to-5 scale.
+The final chart and table both display Lower Mill, East Weir, Bay Outlet, West Reach, Harbor Gate, North Point, Upper Fork, then South Marsh.
+This is a post-run artifact correction and focused verification, not a clean first-pass result or another independent task execution.
+
+This is one fresh, task-specific forward execution of the changed references, not a user study, unaided control, general effectiveness claim, or professional-quality score.
+Screen-reader announcements, contrast ratios, forced colors, text-spacing overrides, 200% or 400% zoom, Safari or Firefox, printed-link activation, and real-reader comprehension remain untested.
+The 320px check is a measured viewport and overflow result, not a complete WCAG reflow conformance test.
+
+## Reference-hash reconciliation
+
+The machine-recorded reference digests for the four `b577bf8` tasks were checked against Git blobs at that commit: 15 product-audit files, 19 report files, 15 A4-document files, and 11 fixed-PDF-audit files all matched.
+The verified `cognitive-accessibility.md` digest at that snapshot is `e1fd3a5d75296c38dad3a2e0fab7a137330e60298f520252a552b4b17f0b8f02`.
+An earlier report-prose transcription concern was resolved against the candidate and machine records; the retired evaluator reports were left unchanged.
+
+The v2 ledger records 20 candidate references and 18 retained artifact files, including the preserved pre-correction screenshot.
+The first ledger had one manually transcribed reference-hash mismatch; the evaluator regenerated all 20 hashes from candidate snapshot `3a669ce05bea56a6b919777bc75d12975236fbff` and recorded the correction.
+All 20 final reference hashes match their candidate files, all 18 artifact hashes match their files, and the report digest in `checks.json` matches the final `report.md`.
+The evaluator refreshed the final HTML, print PDF, and changed screen captures after the order correction; those final hashes also match the machine record.
+
+The evaluator-authored reports, machine records, screenshots, and generated redesigns are not part of the public fixture bundle.
 
 ## What remains unproven
 

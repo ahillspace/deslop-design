@@ -1,0 +1,2 @@
+period,requests_received,wait_over_30_min,requests_with_dispatch_timestamp,median_wait_min,missing_dispatch_timestamp
+Pilot sample,46,15,43,23,3

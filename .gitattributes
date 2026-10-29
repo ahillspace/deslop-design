@@ -1,0 +1,2 @@
+# Keep the byte-preserved PDF review fixture out of text diff checks.
+docs/forward-fixtures/04-fixed-pdf-audit/artifacts/input/raw/fixtures/04-fixed-document/quarterly-capture.pdf binary
