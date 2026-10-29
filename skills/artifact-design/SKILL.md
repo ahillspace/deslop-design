@@ -1,68 +1,74 @@
 ---
 name: artifact-design
-description: Create or substantially redesign HTML reports, dashboards, explanatory pages, and landing pages with content-led structure and deliberate visual decisions. Skip backend work and small factual or style corrections.
+description: Create or substantially redesign HTML reports, dashboards, explanations, and landing pages with coherent visual decisions, useful copy, and working interactions. Skip backend work and narrow factual or style corrections.
 ---
 
 # Artifact design
 
-Make the artifact serve a particular reader and task, with useful words and a coherent visual system.
-User and project requirements govern; preserve the established design system, then apply surface decisions and this guidance.
-A missing design document does not mean a blank slate.
-Scale the process to the change; do not make a small refinement into a branding exercise.
+Build a truthful artifact that helps its reader understand, decide, or act.
+Once invoked for a design task, carry the work from inspection through implementation and rendered correction without asking the user to choose an aesthetic direction.
+The user brief, existing product behavior, and established design system govern.
 
-## Establish the material
+## Orient
 
-Read the brief, implementation, representative content/data, components, assets, and existing design decisions.
-Name the intended reader, their question or action, and the observable outcome.
-Separate supplied facts, supported interpretation, illustrative material, and unknowns in a compact working note.
-Track sources, dates, units, definitions, and caveats where claims depend on them.
-Never invent customers, results, quotes, metrics, prices, availability, or capabilities to fill a layout.
-Ask when missing facts change the goal; otherwise state a reversible assumption and proceed.
-Keep unresolved proof visible in drafts and disclose it at delivery.
+Read the request, implementation, representative content or data, components, assets, and existing design decisions.
+Identify the reader, the main task, the intended outcome, and which facts or behaviors are confirmed.
+Separate facts, interpretation, illustrative material, and unknowns when the distinction affects a claim.
+Never invent results, customers, quotes, prices, dates, availability, or capabilities.
 
-Choose guidance for the surface's job, rather than the product's industry.
-Read only the relevant reference, combining them only for genuinely mixed surfaces:
+Classify the requested surface by what its visitor is doing, not by the company or product name.
+A landing page may persuade, a dashboard may operate, a guide may explain, and a portfolio may let the work speak.
+A mixed product can use more than one of these jobs across its routes or sections.
+On a persuasive brand surface, make the supported offer, proof, terms, and next action easy to see.
+In a working product surface, foreground the task, current state, controls, and recovery; carry the brand through details that do not compete with that work.
+Do not move campaign language into an operational screen or flatten a brand surface into generic utility copy.
+Read the matching genre reference below and [implementation techniques](references/implementation.md).
+Load [copy](references/copy.md) for substantive prose, labels, or claims.
+Load [motion](references/motion.md) only when movement helps explain a change, direct attention, or give the subject useful character.
 
-- [Reports](references/reports.md): conclusions supported by evidence, comparisons, and methods.
-- [Dashboards and internal tools](references/tools.md): repeated decisions and operations.
-- [Editorial and explanations](references/editorial.md): sustained reading and understanding.
-- [Landing pages](references/landing.md): a specific offer and an informed next action.
-- [Copy](references/copy.md): load when forms, recovery, terminology, or persuasive claims need additional work.
+Use the brief and repository to settle routine design choices.
+Make a reversible assumption and proceed when a detail is missing but does not change the task.
+Ask one focused question only if missing information changes the requested outcome, authority to act, or whether the artifact would tell the truth.
+Do not request a concept vote, palette selection, questionnaire, or approval at every step.
 
-Outline the information before styling it.
-Draft actual headings, captions, controls, and representative long content early; start with the hardest table, figure, or state.
-Give every section a reader purpose.
+Make a short working outline before styling: what the reader needs first, the order that answers the request, the actual section names and representative content, the key visual device, and the states or actions that must work.
+Keep ordinary working notes in context; do not create a design sidecar unless the project already uses one or the user asks for it.
 
-## Choose and implement
+Choose the applicable genre by the reader's task:
 
-For an open direction, briefly compare up to three meaningfully different compositions if that helps resolve uncertainty.
-Use relevant references when available, including quiet functional work rather than only galleries.
-For each, record its URL/date or pin, audience and viewing conditions, the observed principle, why it works, its proposed application, and what must not transfer.
-References inform decisions; they do not authorize copying identity, prose, layouts expressed as code, or assets.
-Check individual asset terms and preserve creator, source, license, required credit, and modifications.
-Prefer supplied or verified local assets; public visibility is not a reuse grant.
+- [Reports](references/reports.md): evidence, comparisons, uncertainty, and methods.
+- [Dashboards and internal tools](references/tools.md): repeated decisions, current state, and operational actions.
+- [Editorial and explanations](references/editorial.md): sustained reading, arguments, figures, and navigation.
+- [Landing pages](references/landing.md): a real offer, supporting proof, terms, and an informed next action.
 
-Choose the direction for reasons tied to the content and task.
-Record only useful decisions: hierarchy, alignment/grid, density, type roles/measure/scale, color roles, spacing rhythm, media treatment, interaction states, and narrow-screen priorities.
-Let a few related choices carry character while supporting content stays legible.
-Fonts, cards, gradients, borders, motion, and familiar layouts are options, neither universal requirements nor universal defects.
-A style label or random palette is not a rationale.
+## Build
 
-Use semantic HTML and the project's components/tokens.
-Prefer native behavior; use an established accessible primitive for complex interaction when needed.
-Do not introduce a framework for a simple document.
-Preserve source detail and meaningful distinctions such as missing versus zero.
-Implement applicable focus, hover, active, pending, disabled, empty, error, and success states, with truthful feedback.
-Keep critical content and actions usable with keyboard, zoom, reduced motion, and narrow screens.
+Choose one visual direction that follows from the content, task, existing system, and available assets.
+Tie type, composition, color roles, density, imagery, and interaction details together for a reason the artifact can show.
+Use the techniques reference to make the layout adapt to content instead of defaulting to a fixed desktop grid.
+A photograph, diagram, annotated chart, timeline, table, live sample, or typographic treatment earns space when it explains this subject.
+Do not add one to satisfy a recipe.
 
-## Verify and deliver
+Use semantic HTML, project components and tokens, and native controls before custom behavior.
+Keep actual content and key actions present at narrow widths and zoom.
+Implement every action that the artifact presents.
+Label simulations plainly, preserve entered data after recoverable errors, and show only success that the code actually performs.
+Do not introduce a framework or remote service for a simple HTML artifact.
 
-Inspect the actual rendered artifact with available browser tooling after fonts and images settle.
-Review desktop and mobile composition, long content, keyboard use, primary actions, relevant failure states, console/network errors, and available accessibility findings.
-Check reflow at 320, 390, 768, and 1440 CSS px unless the target requires different sizes; intentional wide-table scrolling must remain usable.
-If browser access is unavailable, label the result as source-checked with visual and interaction verification pending.
+Use movement selectively.
+When it helps, implement one clear entrance, transition, or response that explains a relationship or user action.
+The optional motion reference includes a working progressive enhancement, reduced-motion handling, focus behavior, and lifecycle notes.
+Static work can be the right result.
 
-For a dedicated critique, optionally use [artifact-review](../artifact-review/SKILL.md); design does not depend on it.
-Without it, rank observed defects by user impact, repair within scope, and recheck the touched views and behavior.
-Stop after three repair rounds or the agreed budget; disclose unresolved blockers instead of calling an unfinished result complete.
-Deliver the artifact, useful retained decisions, executed checks, and specific limitations without claiming professional equivalence.
+## Inspect and finish
+
+Open the rendered artifact after fonts, images, and data settle.
+Inspect the whole page at desktop and phone widths, the longest content, keyboard order and visible focus, the main action, relevant empty or error states, and console or failed network requests.
+Use the reference review sizes of 1440, 768, 390, and 320 CSS pixels unless the surface calls for different checks.
+Check text wrapping, zoom and reduced motion where they affect the changed work.
+For a source-only result, state that rendered and interaction checks are pending.
+
+Fix defects you actually observe, then inspect the affected views and behavior again.
+Stop after three focused repair rounds or the agreed budget, and report remaining blockers.
+For a separate critique, [artifact-review](../artifact-review/SKILL.md) can be used independently.
+Deliver the artifact, the actions and checks completed, and material limitations.

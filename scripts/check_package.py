@@ -14,10 +14,15 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ("artifact-design", "artifact-review")
+BACKTICK = chr(96)
+FENCED_BLOCK = re.compile(
+    r"^~~~.*?^~~~[ \t]*$|^" + BACKTICK * 3 + r".*?^" + BACKTICK * 3 + r"[ \t]*$",
+    re.M | re.S,
+)
 
 
 def prose(path):
-    return re.sub(r"^```.*?^```\s*$", "", path.read_text(), flags=re.M | re.S)
+    return FENCED_BLOCK.sub("", path.read_text())
 
 
 def anchors(path):
@@ -56,7 +61,15 @@ def tree_bytes(path):
 
 def check_installs():
     # Execute the published shell snippets with real temporary paths, including spaces.
-    commands = re.findall(r"^```sh\n(.*?)^```", (ROOT / "README.md").read_text(), re.M | re.S)
+    readme = (ROOT / "README.md").read_text()
+    commands = re.findall(r"^~~~sh\n(.*?)^~~~[ \t]*$", readme, re.M | re.S)
+    commands.extend(
+        re.findall(
+            r"^" + BACKTICK * 3 + r"sh\n(.*?)^" + BACKTICK * 3 + r"[ \t]*$",
+            readme,
+            re.M | re.S,
+        )
+    )
     if not commands:
         raise ValueError("No documented shell installation commands found")
     for command in commands:
@@ -90,7 +103,7 @@ def main():
         body = content.split("---", 2)[2]
         bodies += len(body.split())
         print(f"{name}: {len(body.split())} body words; {len(content.split())} with frontmatter")
-    print(f"Combined bodies: {bodies} words (target <=1500; review exceptions in documentation)")
+    print(f"Combined entry bodies: {bodies} words; see docs/rationale.md for routed context cost")
     print(f"Passed: {links} local links; {installs} documented installs and overwrite refusals")
 
 
