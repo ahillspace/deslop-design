@@ -42,6 +42,17 @@ For a control change, check normal result, failure and recovery, repeated activa
 For a document, inspect reading sequence, headings, figures, tables, captions, links, pagination, and exported order when available.
 Use safe fixtures for error states; do not perform a real purchase, deletion, or other destructive action to manufacture evidence.
 
+### Quantitative chart geometry
+
+When a chart uses a numeric position scale, verify that ticks, marks, reference lines, and value labels use one data-to-position mapping and the same plot bounds.
+For a linear 0-to-5 scale, check the expected normalized positions for 0, 2, 4, and 5: 0%, 40%, 80%, and 100%; a value of 4.6 maps to 92%.
+At each relevant rendered width, record the domain, plot bounds, viewport, expected coordinates, measured coordinates, and any deviation.
+Measure the mark endpoint, tick anchor, and reference line in CSS pixels from the rendered plot bounds, using browser geometry when available or a screenshot converted by its device scale factor.
+Compare each coordinate with `x0 + ((v - dmin) / (dmax - dmin)) * (x1 - x0)` for a linear scale, allowing only the browser's subpixel rounding at the measured width.
+Repeat after responsive reflow wherever the chart remains visible, because the absolute coordinates change while each value's normalized position must remain stable.
+Inspect source or chart code for a shared domain and mapping, but do not treat that inspection as proof of rendered alignment.
+Reconcile the plot against the exact-value table or source data, and state which rendered widths and geometry checks were actually inspected.
+
 Report changed and preserved material, checks run, observed result, unresolved defects, and unverified areas.
 A complete statement means only that named checks passed within their stated scope.
 If a material blocker remains or an essential check is unknown, state its effect instead of claiming readiness.

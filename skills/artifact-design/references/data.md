@@ -40,6 +40,18 @@ Give headers meaningful scope and associate them with values; align numeric mate
 For a wide table, use a clearly named and keyboard-reachable local scroll region or an equivalent narrow presentation when it preserves every row and column relationship.
 Do not create a page-wide overflow or hide evidence on small screens.
 
+## Position values on one shared scale
+
+For a quantitative position scale, define its data domain and the actual plot bounds once, then use the same mapping for ticks, bars or points, reference lines, and labels tied to values.
+For a linear domain from `dmin` to `dmax` and plot bounds from `x0` to `x1`, map a value `v` to `x(v) = x0 + ((v - dmin) / (dmax - dmin)) * (x1 - x0)`.
+For bars, map both the baseline and the value so their endpoints share that same plot range.
+For a log, time, or other transformed scale, use the appropriate transform consistently for every tick and mark.
+
+For a linear 0-to-5 scale, values 0, 2, 4, and 5 belong at 0%, 40%, 80%, and 100% of the plot width.
+A 4.0 threshold line and its tick label must share the 80% coordinate, and a 4.6 bar endpoint must be at 92%.
+Do not lay unequal tick values out with equal-width flex or grid cells, or position the axis and marks against different bounds.
+If an endpoint label needs different text alignment to remain visible, keep its anchor on the computed coordinate and adjust only the text anchoring.
+
 ## Example: do not turn mismatch into delay
 
 Suppose source data shows differing statuses in 11 of 18 reviewed requests, flags four possible duplicates that have not been verified, and contains no delay measurement.
