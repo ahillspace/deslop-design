@@ -1,71 +1,47 @@
 ---
 name: artifact-review
-description: Review existing or newly built HTML artifacts for visual hierarchy, useful copy, responsive behavior, and interaction using rendered evidence. Repair only when authorized; disclose source-only review when browser access is unavailable.
+description: Audit HTML and documents with visual, content, factual, accessibility, responsive, and interaction evidence. Report findings only unless repair or redesign is explicitly authorized.
 ---
 
 # Artifact review
 
-Assess whether the actual artifact helps its intended reader understand or act.
-This skill works independently on existing work.
-Establish the target/version, audience, genre, required facts and actions, governing design system, and review budget.
-User/project requirements and the established system outrank this advice.
-Preserve strengths and out-of-scope behavior.
-A request for review authorizes findings, not edits; a build or repair request permits relevant corrections within that scope.
+Judge whether the artifact helps its intended reader understand, decide, present, or act.
+Preserve its supported facts, required content, behavior, and strengths outside the authorized scope.
 
-## Obtain evidence
+## Route before reviewing
 
-Open the real artifact using existing browser tooling in a dedicated context suited to the material.
-Wait for fonts, images, and a representative stable state; verify what actually loaded.
-Record version, viewport, state, and capture locations.
-Inspect desktop and phone screenshots, including the opening, middle, ending, and full composition or working screen.
-Check 1440, 768, 390, and 320 CSS px when applicable, plus zoom and long content.
-Distinguish intentional usable table scrolling from page overflow.
+Read [classification and routing](../artifact-design/references/routing.md) first.
+Classify medium, purpose, requested operation, and conditional features for each materially different route or section.
+Read every applicable reference in full and use its procedure.
+For a thorough review, cover all applicable visual craft, content, accessibility, factual, responsive, document, and interaction dimensions even if the request named one concern.
+Record a compact coverage note for the delivery.
 
-Walk the main task with keyboard and pointer.
-Check accessible names, reading/focus order, visible focus, overlay focus return, and applicable hover, active, pending, disabled, loading, empty, error, and success states.
-Use safe fixtures for unavailable states; do not trigger real purchases or destructive actions merely to test them.
-Inspect DOM/computed styles, console, failed requests, and available automated accessibility checks.
-Investigate serious findings and record manual checks separately.
-Screenshots cannot establish behavior; DOM snapshots cannot establish composition.
+## Gather evidence
 
-When browser access or a state is unavailable, continue with permitted evidence and explicitly limit the conclusion.
-A source-only review must not claim rendered, interaction, or accessibility verification.
-Identify the missing check and what would resolve it.
+Inspect the actual artifact in an isolated browser or document view when available.
+Check the complete relevant sequence, representative long content, middle and end, important states, and the relevant screen widths or pages.
+For HTML, use rendered evidence for appearance, DOM/source for structure, and keyboard or pointer checks for behavior.
+For documents, inspect the reading order, figures, captions, tables, references, and actual print/export when applicable.
+Use safe fixtures for unavailable or failure states; do not trigger real destructive actions.
 
-## Judge and prioritize
+Name the version, state, viewport or page, and evidence class for each finding.
+A screenshot does not prove behavior or keyboard access; source inspection does not prove rendering; an automated scan cannot establish accessibility conformance or comprehension.
+If evidence is unavailable, continue with what can be inspected and mark the affected conclusion unknown.
 
-Look at the rendered work before consulting style detectors.
-Judge hierarchy, reading comfort, alignment, rhythm, density, typography, image crops, captions, and whether expressive choices suit the material.
-Do not score taste, enforce a favorite palette, or replace the governing system with a trend.
+## Report findings and strengths
 
-Judge genre by the reader's success:
+Separate **visual craft** findings from **usability, accessibility, factual, and behavior** findings.
+For each actionable finding include location and state, observed evidence, likely cause or explicit uncertainty, reader impact, a specific remedy, verification needed or performed, severity, and confidence.
+Keep preference separate from defects and cite an exact standard only when the observed failure matches it.
+Prioritize an essential task failure, misleading or unsupported claim, material access barrier, and substantial friction before local polish.
+Name evidence-backed strengths that should survive a repair.
 
-- Reports: answer, comparisons, units, uncertainty, methods, and source trail remain connected.
-- Tools: current scope, urgent work, next actions, data meaning, and recovery are clear.
-- Explanations: argument, figures, references, and navigation support sustained understanding.
-- Landing pages: the offer, terms, credible proof, and actual next action are clear.
+## Keep review authority clear
 
-Audit content truth separately from appearance.
-Trace claims to supplied evidence; flag fabricated proof, lost qualifications, misleading chart encodings, and copy that promises behavior the artifact lacks.
-Distinguish a verified defect from an inference or preference.
+An audit, review, critique, or inspection request is findings-only.
+Do not edit or silently rewrite.
+When the request explicitly authorizes repair, redesign, or rewrite, fix only the scoped issues, compare protected content and behavior before and after, and retest the affected views and paths.
+Do not remove a qualification or change behavior to make a layout look cleaner.
 
-For each actionable finding record:
-
-`location / viewport and state / evidence / user consequence / severity / concrete repair / confidence`
-
-Use blocker for failed essential tasks, fabricated or missing required evidence, or material access barriers; major for substantial friction; minor for limited polish.
-Rank by consequence, then confidence and repair scope.
-Include strengths worth preserving and mark untested behavior unknown.
-
-## Repair and close
-
-In review-only mode, return ranked findings and limitations without changing files.
-With repair authority, fix up to three highest-impact issues as one batch, then recapture the same views and retest affected behavior.
-Do not broaden the redesign or rewrite supported facts to improve visual fit.
-Repeat for at most three rounds, the agreed budget, or until two rounds bring no meaningful improvement.
-Preserve the best verified result.
-
-Completion requires the essential task and required content to work with no known material correctness, accessibility, or layout blocker.
-If budget or access prevents that, report the unresolved condition and its consequence explicitly.
-Report what was inspected, repaired, retested, and left uncertain, with evidence locations.
-A clean linter, screenshot match, self-rating, or attractive first viewport is insufficient proof of quality or professional authorship.
+Report the route coverage, surfaces and states inspected, findings, strengths, changes if authorized, checks actually performed, and material limitations.
+Do not report a clean screenshot, linter, self-rating, or first viewport as proof of the whole artifact.

@@ -1,0 +1,15 @@
+b55dc45e106715e05426401aea6664f6d0482c4fc540fb5df612ea4de93e0a78  docs/forward-fixtures/01-product-audit/artifacts/01-product-audit.md
+3b22ceb4817ea42a198c6b7eac0064798d052f5d9f046ca349c4a51fcd79fcf9  docs/forward-fixtures/01-product-audit/artifacts/fixtures/01-product/queue.html
+1b0e76caf820c5ff314efb9dde9a959a2b7c4901fda05ca6fbed86504241902d  docs/forward-fixtures/01-product-audit/artifacts/fixtures/01-product/batch-records.csv
+8dd28b19de2655b6626e5d19fcd7078e4f7b01c9e9ea8d8490117449ae23c99d  docs/forward-fixtures/01-product-audit/artifacts/fixtures/01-product/source-note.md
+76d4fc301d00efae15bcf245fc5273812b26e27428d9d477a0fd7c0c6bb86d45  docs/forward-fixtures/02-narrative-report/artifacts/input/02-report-redesign.md
+8c09b6f9ba4c3cd5a9260b991855dc34da55a22611744c2781d408acecc8a50c  docs/forward-fixtures/02-narrative-report/artifacts/input/fixtures/02-report/report.html
+5a1433f23ace0046da7ad9a331ea08dd7ac2399294d52bae6f80392761ba34ad  docs/forward-fixtures/02-narrative-report/artifacts/input/fixtures/02-report/methods.md
+a2cab8d88438c0d9062ae9abec5813a62acd00ac464ac6ff976eaeac43c3704d  docs/forward-fixtures/02-narrative-report/artifacts/input/fixtures/02-report/station-samples.csv
+dcf612004d951e038489eb34173c00a7050b4afd3a96bbb450fe5672f4d54c40  docs/forward-fixtures/03-print-decision/artifacts/03-print-document.md
+3abb60dd083699f36c3a80d446ec7b3f6b41c136ee9d2f1e3a7629dcb1eb4ae4  docs/forward-fixtures/03-print-decision/artifacts/fixtures/03-print-decision/source/decision-notes.md
+c5372ef04a779adb898ce4245b7d621cba507980afb77c76e46602b6188e4621  docs/forward-fixtures/03-print-decision/artifacts/fixtures/03-print-decision/source/references.txt
+50782ba26fa73a16fc32edde637b9ac0305f836d858498405e6755e3caa64301  docs/forward-fixtures/03-print-decision/artifacts/fixtures/03-print-decision/source/wait-records.csv
+3f6f1d3877153b6cfd1049b9001d3b65748512099d252381a48ac193cb05753a  docs/forward-fixtures/04-fixed-pdf-audit/artifacts/input/raw/04-fixed-pdf-audit.md
+1dfb3967eace88a175a92b40b946f30beae52f1e009ada7d86c82beffd529f50  docs/forward-fixtures/04-fixed-pdf-audit/artifacts/input/raw/fixtures/04-fixed-document/quarterly-capture.pdf
+3ac17ee2a5ffc232d1560d7e49711a145e8c00288bd35343d15e78b7746f56c9  docs/forward-fixtures/04-fixed-pdf-audit/artifacts/input/raw/fixtures/04-fixed-document/task-context.txt

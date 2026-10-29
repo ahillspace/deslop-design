@@ -3,6 +3,8 @@
 This plan is for maintainers deciding whether the package improves outcomes enough to justify owning it.
 No blinded benchmark, independent human scoring, or professional-equivalence study has run.
 The author-run [smoke checks](validation.md) test practical paths and obvious failure modes only.
+The four completed forward-use prompts and their original synthetic inputs are available in the [forward fixture bundle](forward-fixtures/README.md).
+Those development cases are reproducible inputs, not held-out tasks for a comparative claim.
 
 ## Fair comparison
 
@@ -12,7 +14,8 @@ Consider full Taste Skill as a further tool/landing challenger only with a separ
 Give all arms identical briefs, facts, licensed assets or reference-search permissions, model snapshot/settings, harness, browser capabilities, network rules, and time/token/tool limits.
 Include retrieval, images, retries, required setup, and failures in costs.
 Use fresh contexts and isolated directories; randomize run order and repeat runs if seeds cannot be held constant.
-Supply the same prewritten answers to clarification questions instead of quietly art-directing one arm.
+If a missing fact materially changes the task, provide the same answer to each arm and count the interruption in its cost.
+Do not add concept approvals or aesthetic steering to an arm that does not require them.
 
 Start with one brief in each of four genres and two repetitions per arm: 32 builds.
 A proposed confirmation uses three held-out briefs per genre and three repetitions per arm: 144 builds.
