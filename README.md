@@ -1,19 +1,20 @@
 # deslop-design
 
-Two Markdown skills for agents creating and reviewing HTML artifacts.
-They connect the reader's task to content, visual decisions, implementation, and rendered evidence.
-The design skill works end to end after invocation, using the brief and existing project context to choose and implement a direction without concept-vote or questionnaire loops.
+Two Markdown skills for agents creating, reviewing, and redesigning HTML and documents.
+They route from a concise artifact classification to self-contained craft references, with factual and behavior checks tied to the actual source and rendered result.
+The design skill carries authorized work through a grounded direction, implementation, and rendered correction without routine questionnaires.
 
 | Skill | Use it for |
 |---|---|
-| [artifact-design](skills/artifact-design/SKILL.md) | Creating or substantially redesigning a report, dashboard, explanation, or landing page. |
-| [artifact-review](skills/artifact-review/SKILL.md) | Reviewing an existing artifact or checking completed UI work, with repairs only within granted authority. |
+| [artifact-design](skills/artifact-design/SKILL.md) | Creating, rewriting, or substantially redesigning HTML, reports, dashboards, explanations, presentations, print documents, or landing pages. |
+| [artifact-review](skills/artifact-review/SKILL.md) | Reviewing an existing HTML artifact or document, with repairs only when the request grants that authority. |
 
-Design and review retain separate entrypoints.
-Each works without the other.
-Design directs the model to load the implementation guide and only the relevant genre reference or references; copy and motion guidance is conditional on those jobs.
-Review works independently on an existing artifact.
-Neither needs a framework, external service, global install, or project instruction-file changes.
+The two invocation names remain compatible with existing installations.
+Keep both folders together because both use the shared classification and routing guide in artifact-design references.
+The route classifies medium, reader purpose, requested operation, and conditional features, then names the references that must be read for the task.
+Narrow work loads fewer references; thorough audits and substantial redesigns inspect every applicable dimension.
+The route records references read and checks unavailable, so a link is not mistaken for applied guidance.
+Neither skill needs a framework, external service, global install, or project instruction-file changes.
 Bring the browser tooling and project components you already use.
 
 ## Project-local installation
@@ -22,7 +23,11 @@ Clone this repository or download a revision, then open a shell.
 Set package_dir to its absolute checkout path and project_dir to the existing project's absolute root.
 The commands below copy both complete skill folders with the package license and refuse to replace an existing installation.
 Review existing folders before intentionally updating them.
-Keep the two folders beside each other so the optional cross-skill link resolves.
+Keep the two folders beside each other because both use the shared routing reference.
+
+For an installation that has only one skill from an older package revision, add the other folder from this same revision as its sibling.
+If either folder already exists, back it up and replace both folders together from one package revision so the shared reference links resolve consistently.
+The install commands intentionally stop when either destination exists; review and update existing skills manually rather than overwriting them silently.
 
 For Codex CLI, use the repository's .agents/skills directory, as described in the [official local skill documentation](https://learn.chatgpt.com/docs/build-skills).
 
@@ -61,7 +66,7 @@ In Codex CLI, mention $artifact-design or $artifact-review; /skills also lists a
 In Claude Code, invoke /artifact-design or /artifact-review.
 Both can select skills from descriptions; explicit invocation makes your intention clear.
 If a skill is missing, restart the session and check its path.
-Other Markdown-capable agents can read the entry file and relevant relative references directly, but automatic discovery in other harnesses is untested.
+Other Markdown-capable agents can read the entry file and routed relative references directly, but automatic discovery in other harnesses is untested.
 
 ## Example
 
@@ -86,18 +91,19 @@ This is an illustrative brief, not a claim about an actual dataset or a measured
 skills/
   artifact-design/
     SKILL.md
-    references/{reports,tools,editorial,landing,copy,implementation,motion}.md
+    references/{routing,intake-structure,visual-craft,documents,data,accessibility,semantics-content,responsive,interaction-states,forms-search,keyboard,cognitive-accessibility,preferences,tokens,ai-interface,concepts,task-walkthrough,qa-parity,reports,tools,editorial,landing,copy,implementation,motion}.md
   artifact-review/
     SKILL.md
 docs/
   rationale.md
+  source-selection.md
   provenance.md
   validation.md
   benchmark.md
 scripts/check_package.py
 ~~~
 
-Read [rationale and coverage](docs/rationale.md) for the retained mechanisms, [source provenance](docs/provenance.md) for pins and licensing boundaries, and [validation](docs/validation.md) for executed checks.
+Read [rationale and routing](docs/rationale.md) for the architecture and coverage, [source selection](docs/source-selection.md) for reviewed categories and adopted or excluded mechanisms, [source provenance](docs/provenance.md) for pins and licensing boundaries, and [validation](docs/validation.md) for executed checks.
 The [benchmark plan](docs/benchmark.md) is proposed, not executed.
 No independent preference, professional-equivalence result, or large paid benchmark is claimed.
 A small author-run check cannot establish universal quality.

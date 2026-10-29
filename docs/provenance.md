@@ -4,6 +4,7 @@ This register traces selected mechanisms without treating external projects as i
 The current source review was completed on 29 October 2026.
 It covers the exact repository files and licenses at the recorded commits for this synthesis.
 It is source inspection, not comparative proof of output quality.
+The [source-selection record](source-selection.md) lists the reviewed Owl-Listener collections and categories, all 26 primary assignment pins, and adoption, conditional, and exclusion decisions.
 
 All skill instructions, examples, and checker code in this repository are original package text.
 The register records conceptual inspiration rather than reproduced passages, source code, templates, screenshots, fonts, or images.

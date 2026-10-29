@@ -1,7 +1,8 @@
 # Validation record
 
 This record separates package correctness, author practice, and evidence that has not been collected.
-The strengthened snapshot and author checks are dated 29 October 2026 (UTC).
+Checks below name the snapshot or fixture they cover because package work continued after earlier trials.
+The current compiler candidate has not yet received its independent forward-use evaluation.
 No independent human scores, blinded comparison, professional-equivalence result, or large paid benchmark is claimed.
 
 ## Repeatable package checks
@@ -18,10 +19,11 @@ It reports entry word counts without treating wording or exact headings as evide
 The pull request workflow runs this network-free check.
 The local result below is separate from the delivery pipeline's CI result.
 
-The package check passed with 35 local links and both documented installation paths, including overwrite refusal.
-Both skills passed the skill-creator `quick_validate.py` check during development.
-`git diff --check` passed before the snapshot commit.
+Earlier package checks passed with 35 local links and both documented installation paths, including overwrite refusal.
 The checker initially detected that a README shell block used a fence style its parser did not recognize; the parser was updated to handle both supported fence styles and the real installation checks passed.
+The current package check passed with 137 local links and both documented installation paths, including overwrite refusal.
+Both current entrypoints passed the skill-creator `quick_validate.py` check.
+`git diff --cached --check` passed on the candidate tree.
 
 Codex CLI discovered both enabled skills from a temporary project's `.agents/skills` directory through its app-server `skills/list` interface.
 This confirms discovery, not an autonomous skill invocation or automatic-selection outcome.
@@ -44,8 +46,8 @@ These are routing judgments, not measured automatic-selection accuracy.
 | Optimize a database query with no UI change | Neither skill |
 
 Review's description covers newly built artifacts so a substantive build can receive a final critique.
-The design skill includes completion checks and does not require review to be installed or invoked.
-The review skill has no required cross-skill references and works alone.
+The design skill includes completion checks and does not require review to be invoked.
+Both folders must be installed together because review uses the shared classification and routing reference in artifact-design.
 
 ## Earlier author-run practice trial
 
@@ -90,7 +92,10 @@ These observations apply only to this prototype and do not constitute an accessi
 A skill-only snapshot at commit `7637b40` was prepared for a fresh interactive build task and a report-revision task with source data.
 Those briefs and fixtures contain no target copy, style preference, conclusion, or expected answer.
 
-## Independent forward-use trial
+## Earlier independent forward-use trial
+
+This trial evaluated the prior snapshot at commit `7637b40`, not the current compiler candidate.
+It does not verify the expanded route, document references, or positive craft recipes described in this revision.
 
 An independent evaluator used snapshot `7637b40` for both fresh tasks and completed them without discovery questions.
 The build matched all eight supplied repair records, implemented search, priority and status filters, empty states, and a page-local ready action, and disclosed its assumed eligibility rule.
@@ -110,6 +115,13 @@ The separate author-run recipe check above exercises reduced motion and interact
 Actual browser zoom, screen-reader use, and physical-device behavior were not verified.
 No repository test suite or comparative benchmark was run.
 The earlier four-fixture trial and the separate motion check remain author-run evidence only.
+
+## Current compiler candidate
+
+The candidate routes through a shared classifier and now includes specialist references for documents, semantic content, responsive behavior, data, accessibility, interaction, user preferences, and conditional AI interfaces.
+It also includes concrete construction examples for an asymmetric reading-and-annotation grid, a contextual type trial, measured semantic color pairs, and interruption-safe list continuity motion.
+Four raw tasks and fixtures are prepared for an independent forward-use evaluation: an interactive product audit, a data-bearing HTML report redesign, a printable decision document, and an audit of a fixed PDF with no source files.
+The independent evaluation has not run yet; these package checks do not establish routing or artifact quality.
 
 ## What remains unproven
 
